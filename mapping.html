@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      background-image: url(https://wallpapers.com/images/featured/math-zarpq292tmb3whun.jpg);
+      height: 100vh;
+      font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+      margin: 50px;
+    }
+
+    #product_value {
+      font-size: 40px;
+      color: mediumslateblue;
+      text-shadow: 4px 4px 20px white;
+    }
+    #product_value2 {
+      font-size: 40px;
+      color: mediumaquamarine;
+      text-shadow: 4px 4px 20px white;
+    }
+    #product_value3 {
+      font-size: 40px;
+      color: darkseagreen;
+      text-shadow: 4px 4px 20px white;
+    }
+
+    h3 {
+      font-size: 25px;
+      color: khaki;
+      text-shadow: 4px 4px 20px white;
+    }
+  </style>
+  <body>
+    <h3>Square Root of Every Element:</h3>
+    <p id="product_value"></p>
+
+    <h3>Square of Every Element:</h3>
+    <p id="product_value2"></p>
+
+    <h3>Cube of Every Element:</h3>
+    <p id="product_value3"></p>
+
+    <script>
+      var numbers = [81, 9, 144, 625, 169];
+
+      function getSquareRoot(num) {
+        return num ** 0.5;
+      }
+
+      function getSquare(num) {
+        return num * num;
+      }
+
+      function getCube(num) {
+        return num * num * num;
+      }
+
+      var squareRoots = numbers.map(getSquareRoot);
+      var squares = numbers.map(getSquare);
+      var cubes = numbers.map(getCube);
+
+      document.getElementById("product_value").innerHTML =
+        squareRoots.join(" == ");
+      document.getElementById("product_value2").innerHTML =
+        squares.join(" == ");
+      document.getElementById("product_value3").innerHTML = cubes.join(" == ");
+    </script>
+  </body>
+</html>
